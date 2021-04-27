@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="NeuralNetworks.NeuralNetworks.Networks.NeuralNetwork">
+    <Position X="9" Y="1.75" Width="2.5" />
+    <Members>
+      <Method Name="Backpropagate" Hidden="true" />
+      <Property Name="FeedbackLayer" Hidden="true" />
+      <Method Name="GetErrors" Hidden="true" />
+      <Method Name="Train" Hidden="true" />
+      <Property Name="Training" Hidden="true" />
+    </Members>
+    <AssociationLine Name="NeuralLayers" Type="NeuralNetworks.NeuralNetworks.Layers.NeuralLayer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.307" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAAABAAEABgAAAAAAgEAAAgAAAAAEAAAAQAQI=</HashCode>
+      <FileName>NeuralNetworks\Networks\NeuralNetwork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InputLayer" />
+      <Property Name="FeedbackLayer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="NeuralLayers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Layers.NeuralLayer">
+    <Position X="9.25" Y="4.75" Width="2" />
+    <Members>
+      <Method Name="Backpropagate" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Neurons" Type="NeuralNetworks.NeuralNetworks.Neurons.Neuron">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.755" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>NeuralNetworks\Layers\NeuralLayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Neurons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Layers.SignalLayer">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Layers\SignalLayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Signals" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Signal">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Signal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Neurons.Neuron">
+    <Position X="7.5" Y="7" Width="2.5" />
+    <Members>
+      <Property Name="AxonTerminals" Hidden="true" />
+      <Method Name="Backpropagate" Hidden="true" />
+      <Property Name="BackpropagateSum" Hidden="true" />
+      <Property Name="Dendrite" Hidden="true" />
+      <Property Name="Slope" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_activationFunction" Type="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.IActivationFunction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DendriteTerminals" Type="NeuralNetworks.NeuralNetworks.Connections.Neurite" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.832" Y="7" />
+        <Point X="8.832" Y="6.5" />
+        <Point X="8.497" Y="6.5" Type="JumpStart" />
+        <Point X="8.331" Y="6.5" Type="JumpEnd" />
+        <Point X="7" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.152" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAQAAEAAhAAAAAAACAAAAAAABAAAAAAAAAAAAAEcA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\Neuron.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_activationFunction" />
+      <Property Name="Axon" />
+      <Property Name="Dendrite" />
+      <Property Name="AxonTerminals" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DendriteTerminals" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Neurite">
+    <Position X="5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Neurite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InputSignal" />
+      <Property Name="Synapse" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Synapse">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Synapse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.BipolarSigmoidActivationFunction">
+    <Position X="11.5" Y="5.75" Width="2.5" />
+    <Members>
+      <Method Name="Slope" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\ActivationFunctions\BipolarSigmoidActivationFunction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.IActivationFunction">
+    <Position X="11.5" Y="7.5" Width="1.75" />
+    <Members>
+      <Method Name="Slope" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\ActivationFunctions\IActivationFunction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

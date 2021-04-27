@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="NeuralNetworks.NeuralNetworks.Networks.NeuralNetwork">
+    <Position X="14.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAAABAAEABgAAAAAAgEAAAgAAAAAEAAAAQAQI=</HashCode>
+      <FileName>NeuralNetworks\Networks\NeuralNetwork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Training" />
+      <Property Name="InputLayer" />
+      <Property Name="FeedbackLayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Layers.SignalLayer">
+    <Position X="17.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Layers\SignalLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Layers.NeuralLayer">
+    <Position X="15.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>NeuralNetworks\Layers\NeuralLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Data.TrainingData">
+    <Position X="10.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Data\TrainingData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Data.Pattern">
+    <Position X="9.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Data\Pattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Signal">
+    <Position X="17.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Signal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Neurons.Neuron">
+    <Position X="20" Y="5.75" Width="2.25" />
+    <AssociationLine Name="_activationFunction" Type="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.IActivationFunction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.477" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Axon" Type="NeuralNetworks.NeuralNetworks.Connections.Signal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20.562" Y="5.75" />
+        <Point X="20.562" Y="3.302" />
+        <Point X="19" Y="3.302" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Dendrite" Type="NeuralNetworks.NeuralNetworks.Connections.Signal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20.312" Y="5.75" />
+        <Point X="20.312" Y="3.609" />
+        <Point X="19" Y="3.609" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAQAAEAAhAAAAAAACAAAAAAABAAAAAAAAAAAAAEcA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\Neuron.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_activationFunction" />
+      <Property Name="Axon" />
+      <Property Name="Dendrite" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.BipolarSigmoidActivationFunction">
+    <Position X="20.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\ActivationFunctions\BipolarSigmoidActivationFunction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Neurite">
+    <Position X="15.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Neurite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InputSignal" />
+      <Property Name="Synapse" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Connections.Synapse">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Connections\Synapse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Networks.Trainings.Neuroevolution.QIGA2Training">
+    <Position X="11.75" Y="2.75" Width="2.25" />
+    <Members>
+      <Method Name="CalculateTotalError" Hidden="true" />
+      <Method Name="GetSSE" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAggAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Networks\Trainings\Neuroevolution\QIGA2Training.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NeuralNetworks.NeuralNetworks.Networks.Trainings.Neuroevolution.NeuralNetworkProblem">
+    <Position X="9.25" Y="2.25" Width="2.25" />
+    <Members>
+      <Method Name="Bin2dec" Hidden="true" />
+      <Method Name="CopySlice" Hidden="true" />
+      <Method Name="GetSynapses" Hidden="true" />
+      <Method Name="Getx" Hidden="true" />
+      <Field Name="neuralNetwork" Hidden="true" />
+      <Field Name="synapses" Hidden="true" />
+      <Field Name="trainingData" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAgAAAAAAIgAgAAAQAEIABAAAAAAEgBgAA=</HashCode>
+      <FileName>NeuralNetworks\Networks\Trainings\Neuroevolution\NeuralNetworkProblem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="NeuralNetworks.NeuralNetworks.Networks.Trainings.ITraining">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuralNetworks\Networks\Trainings\ITraining.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NeuralNetworks.NeuralNetworks.Neurons.ActivationFunctions.IActivationFunction">
+    <Position X="20.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>NeuralNetworks\Neurons\ActivationFunctions\IActivationFunction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
